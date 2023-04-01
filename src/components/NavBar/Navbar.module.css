@@ -1,0 +1,22 @@
+.navbarn {
+  background-color: #280f6b;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbarn-navb {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  grid-area: nav;
+}
+
+.logo{
+  border-radius: 50%;
+  border-radius: 50px 50px 50px 50px; 
+  width: 80px; 
+  height: 80px;
+}

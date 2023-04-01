@@ -1,0 +1,23 @@
+.tt{
+font-size: x-large;
+font-weight: bold;    
+color: rgb(38, 18, 124);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+animation: App-title infinite 3s alternate-reverse ;
+}
+
+
+  @keyframes App-title {
+    0% {
+      transform: rotate(-6deg) scale(1);
+      color: #ffffff;
+    }
+    50% {
+      transform: rotate(6deg) scale(1.2);
+      color: #0f1cd4;
+    }
+    100% {
+      transform: rotate(-6deg) scale(1);
+      color: #070864;
+    }
+  }
