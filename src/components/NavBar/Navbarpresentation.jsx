@@ -1,23 +1,20 @@
+import { Link } from "react-router-dom";
 import "./Navbar.module.css";
-import { Button } from "react-bootstrap";
 
 function Navbarpresentation({ links }) {
   return (
    
       <div className="navbarn-navb">
-        {links.map((link) => (
-          <Button
-            key={link.title}
-            href={link.url}
-            variant="secondary"
-            className="ml-auto"
-          >
-            {link.title}
-          </Button>
-        ))}
+        <Link to="/">
+          Ecommerce
+        </Link>
+        <div className="Categories">
+        <Link to={"/category/corralon"}>Corralon</Link>
+<Link to={"/category/ferreteria"}>Ferreteria</Link>
+<Link to={"/category/plomeria"}>Plomeria</Link>
       </div>
-   
-  );
-}
+</div>   
 
-export default Navbarpresentation;
+)
+};
+export default Navbarpresentation

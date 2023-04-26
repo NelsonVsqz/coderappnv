@@ -5,7 +5,7 @@ import { Box, Grid } from "@mui/material";
 import logo from "../CartWidget/assets/construc.jpg";
 import styles from "./Navbar.module.css";
 
-function Navbarcontainer() {
+const Navbarcontainer = () => {
   const links = [
     { title: "Corralon", url: "#" },
     { title: "Ferreteria", url: "#" },
@@ -14,24 +14,23 @@ function Navbarcontainer() {
 
   return (
     <Box>
-    <Grid container>
-      <Grid item xs={1}>
-      <img className={styles.logo} src={logo} alt="logo-widget"/>
+      <Grid container>
+        <Grid item xs={1}>
+          <img className={styles.logo} src={logo} alt="logo-widget" />
+        </Grid>
+        <Grid item xs={10}>
+          <Headercontainer />
+        </Grid>
+        <Grid item xs={1}>
+          <CartWidgetcontainer />
+        </Grid>
+        <Grid item xs={12}>
+          <Navbarpresentation links={links} />
+        </Grid>
+        <Grid item xs={12}></Grid>
       </Grid>
-      <Grid item xs={10}>
-      <Headercontainer />
-      </Grid>
-      <Grid item xs={1}>
-      <CartWidgetcontainer />
-      </Grid>
-      <Grid item xs={12}>
-      <Navbarpresentation links={links} />
-    </Grid>
-    </Grid>
-  </Box>
-
-
+    </Box>
   );
-}
+};
 
 export default Navbarcontainer;
