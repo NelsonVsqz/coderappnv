@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import ItemCountcontainer from "../ItemCount/ItemCountcontainer";
 import { getDocs,collection,query,where } from "firebase/firestore";
 import { db } from "../../services/firebase/firebaseConfig";
 
@@ -33,11 +32,6 @@ const ItemListContainer = () => {
       <div>
         
         <ItemList products={products} />
-        <ItemCountcontainer
-            initial={1}
-            stock={10}
-            onAdd={(quantity) => console.log("Cantidad agregada", quantity)}
-          />
 
       </div>
     );

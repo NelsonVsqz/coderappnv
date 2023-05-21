@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
-import "./Navbar.module.css";
+import styles from "./Navbar.module.css";
 
 function Navbarpresentation({ links }) {
   return (
    
-      <div className="navbarn-navb">
-        <Link to="/">
-          Ecommerce
+      <div className={styles.Navbar}>
+        <Link to="/" className={styles.NavbarBrand}>
+          Contrumundo
         </Link>
-        <div className="Categories">
-        <Link to={"/category/corralon"}>Corralon</Link>
-<Link to={"/category/ferreteria"}>Ferreteria</Link>
-<Link to={"/category/plomeria"}>Plomeria</Link>
+        <div className={styles.Categories}>
+       <Link to={"/"} className={styles.CategoryLink}>Todos</Link>
+       <Link to={"/category/"+links.Corralon} className={styles.CategoryLink}>Corralon</Link>
+<Link to={"/category/"+links.Ferreteria} className={styles.CategoryLink}>Ferreteria</Link>
+<Link to={"/category/"+links.Plomeria} className={styles.CategoryLink}>Plomeria</Link>
       </div>
 </div>   
 

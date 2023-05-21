@@ -1,61 +1,47 @@
-
-import { useContext, useState } from 'react';
-import ItemCountpresentation from './../ItemCount/ItemCountpresentation';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../../context/cartContext';
+import ItemCountcontainer from './../ItemCount/ItemCountcontainer';
+import  styles from './ItemDetail.module.css';
 
-const ItemDetail = ({id,name,img,category,descripcion,price,stock}) => {
+const ItemDetail = ({product,onAdd,cantidadTotal}) => {
 
-const [quantityAdded,setQuantityAdded]= useState(0)
-
-const { addItem } = useContext(CartContext)
-
-const handleOnAdd = (quantity) =>{
-setQuantityAdded(quantity)
-
-const item = {
-    id,name,price
-}
-
-addItem(item,quantity)
-
-}
 
 return (
-        <article className="CardItem">
-        <header className="Header">
-        <h2 className="ItemHeader">
-        {name}
-        </h2>
-        </header>
+    <>
+    <header className={styles.Header}>
+    <h2 className={styles.ItemHeader}>
+    {product.name}
+    </h2>
+    </header>
+  <article className={styles.CardItem}>
         <picture>
-            <img src={img} alt={name} className="ItemImg" />
+            <img src={product.img} alt={product.name} className={styles.ItemImg} />
         </picture>
-        <section>
-        <p className="Info">
-         Categoria: ${category}
+        <section className={styles.MarcInfo}>
+        <p className={styles.Info}>
+         Categoria: {product.category}
         </p>
-        <p className="Info">
-         Descripcion: ${descripcion}
+        <p className={styles.Info}>
+         Descripcion: {product.description}
         </p>                    
-        <p className="Info">
-         Precio: ${price}
+        <p className={styles.Info}>
+         Precio: ${product.price}
         </p>    
-        <p className="Info">
-         Stock disponible: {stock}
+        <p className={styles.Info}>
+         Stock disponible: {product.stock}
         </p>
         </section>
-        <footer className="ItemFooter">
+        <footer className={styles.ItemFooter}>
         {
-            quantityAdded > 0 ? (
-                     <Link to="/cart" className='Option'>Terminar compra</Link>
+            cantidadTotal > 0 ? (
+                     <Link to="/cart" className={styles.Option}>Terminar compra</Link>
                 ) :(
-         <ItemCountpresentation  initial={1} onAdd={handleOnAdd} stock={stock}/>
+         <ItemCountcontainer  initial={cantidadTotal} onAdd={onAdd} stock={product.stock} className={styles.ItemCountContainer}/>
         )
         }
         </footer>
         
         </article>
+        </>
         )
   }
   

@@ -1,3 +1,47 @@
-.Counter{
-    background-color: aliceblue;
-}
+.Counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .Button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Button:hover {
+    background-color: #0056b3;
+  }
+  
+  .Number {
+    font-size: 24px;
+    margin: 0 16px;
+  }
+  
+  .AddButton {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .AddButton:hover {
+    background-color: #218838;
+  }
+  

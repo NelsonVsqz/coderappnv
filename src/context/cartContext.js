@@ -21,7 +21,7 @@ const addItem = (item,quantity)=>{
 
 const removeItem = (itemId)=>{
 
-const cartUpdated = cart.filter(prod => prod.id === itemId )
+const cartUpdated = cart.filter(prod => prod.id !== itemId )
 setCart(cartUpdated)
 } 
 
@@ -49,8 +49,18 @@ const getTotalPrice = () => {
     return total;
   };
 
+  const getQuantityById = (itemId)=>{
+    let product = cart.find( elemento => elemento.id === itemId)
+    return product?.quantity
+  }
+  
+  const getPriceById = (itemId) => {
+    let product = cart.find( elemento => elemento.id === itemId)
+    return product?.quantity * product?.price
+  };
+
 return (    
- <CartContext.Provider value={{cart,addItem,removeItem,clearCart,getTotalPrice,getTotalQuantity}}>
+ <CartContext.Provider value={{cart,addItem,removeItem,clearCart,getTotalPrice,getTotalQuantity,getQuantityById,getPriceById}}>
     {children}
  </CartContext.Provider>    
 )

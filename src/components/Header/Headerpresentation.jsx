@@ -1,7 +1,9 @@
 import styles from "./Header.module.css";
 
 function headerpresentation({ title }) {
-  return <div className={styles.tt}>{title}</div>;
+
+  return( <div className={styles.Header}>{title}</div> );
+
 }
 
 export default headerpresentation;

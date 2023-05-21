@@ -6,11 +6,12 @@ import logo from "../CartWidget/assets/construc.jpg";
 import styles from "./Navbar.module.css";
 
 const Navbarcontainer = () => {
-  const links = [
-    { title: "Corralon", url: "#" },
-    { title: "Ferreteria", url: "#" },
-    { title: "Plomeria", url: "#" },
-  ];
+  const links = {
+     Corralon: "corralon",
+     Ferreteria: "ferreteria",
+     Plomeria: "plomeria",
+  }
+  ;
 
   return (
     <Box>

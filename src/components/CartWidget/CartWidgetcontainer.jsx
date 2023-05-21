@@ -4,8 +4,9 @@ import { CartContext } from "../../context/cartContext"
 
 
 const CartWidgetcontainer = () => {
-//let contador = 0
-const {totalQuantity} = useContext(CartContext)
+
+const {getTotalQuantity} = useContext(CartContext)
+let totalQuantity = getTotalQuantity()
     return (
     
   <CartWidgetpresentation totalQuantity={totalQuantity} />

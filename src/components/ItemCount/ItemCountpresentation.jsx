@@ -5,27 +5,25 @@ const ItemCountpresentation = ({
   decrement,
   quantity,
   increment,
-  onAdd,
-  stock,
+  onAdd
 }) => {
   return (
     <div className={styles.Counter}>
-      <div className="Controls">
-        <button className="Button" onClick={decrement}>
+      <div className={styles.Controls}>
+        <button className={styles.Button} onClick={decrement}>
           -
         </button>
-        <h4 className="Numbre">{quantity}</h4>
-        <button className="Button" onClick={increment}>
+        <h4 className={styles.Number}>{quantity}</h4>
+        <button className={styles.Button} onClick={increment}>
           +
         </button>
       </div>
       <div>
         <button
-          className="Button"
+          className={styles.AddButton}
           onClick={() => onAdd(quantity)}
-          disabled={!stock}
         >
-          Agregar al carr
+          Agregar al carrito
         </button>
       </div>
     </div>

@@ -1,0 +1,70 @@
+.CardItem {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;    
+  }
+  
+  .Header {
+    margin-bottom: 10px;
+  }
+  
+  .ItemHeader {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .ItemImg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  .MarcInfo{
+border: 5px;
+border-color: #c3c3c7;
+border-style: groove;
+
+  }
+  
+  .Info {
+    font-size: 16px;
+    color: #615f68;
+    margin-bottom: 8px;
+  }
+  
+  .ItemFooter {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+  
+  .Option {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-right: 16px;
+  }
+  
+  .Option:hover {
+    background-color: #0056b3;
+  }
+  
+  .ItemCountContainer {
+    max-width: 400px;
+  }
+  

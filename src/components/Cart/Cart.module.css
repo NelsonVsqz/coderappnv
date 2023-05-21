@@ -1,0 +1,65 @@
+.Container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .NoItems {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .TotalContainer{
+    display: flex ;
+    justify-content: stretch;
+    flex-direction: column;
+    align-items: center;   
+  }
+
+  .Option {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 16px;
+  }
+  
+  .Option:hover {
+    background-color: #0056b3;
+  }
+  
+  .Total {
+    font-size: 20px;
+    margin-top: 16px;
+  }
+  
+  .Quantity {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+  
+  .Button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 16px;
+  }
+  
+  .Button:hover {
+    background-color: #c82333;
+  }
+  

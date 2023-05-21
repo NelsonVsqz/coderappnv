@@ -1,22 +1,39 @@
-.navbarn {
-  background-color: #280f6b;
-  color: #fff;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-
-.navbarn-navb {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  grid-area: nav;
-}
-
-.logo{
+.logo {
   border-radius: 50%;
-  border-radius: 50px 50px 50px 50px; 
-  width: 80px; 
+  border-radius: 50px 50px 50px 50px;
+  width: 80px;
   height: 80px;
+}
+
+.Navbar {
+  background-color: #007bff;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.NavbarBrand {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.Categories {
+  display: flex;
+  gap: 16px;
+}
+
+.CategoryLink {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.CategoryLink:hover {
+  color: #ddd;
 }

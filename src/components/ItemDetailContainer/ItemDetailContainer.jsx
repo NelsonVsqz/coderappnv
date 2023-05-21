@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemDetail from './../ItemDetail/ItemDetail';
 import { db } from "../../services/firebase/firebaseConfig";
 import { getDoc, collection, doc } from "firebase/firestore";
+import { CartContext } from "../../context/cartContext";
 
 
 const ItemDetailContainer = () => {
 
-    const [product,setProduct] = useState(null)
+    const [product,setProduct] = useState({})
+
+    const { addItem, getQuantityById } = useContext(CartContext);
 
     const {itemId} = useParams()
 
@@ -29,9 +32,23 @@ console.error(error)
     })
 },[itemId])
 
+
+const onAdd = (cantidad) => {
+  let data = {
+    ...product,
+    quantity: cantidad,
+  };
+
+  addItem(data,cantidad);
+
+};
+
+let cantidadTotal = getQuantityById(itemId);
+
+
     return (
       <div className="ItemDetailContainer" >
-        <ItemDetail {...product} />
+        <ItemDetail product={product} onAdd={onAdd} cantidadTotal={cantidadTotal} />
       </div>
     );
   }

@@ -1,12 +1,20 @@
 import ItemCountpresentation from "./ItemCountpresentation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const ItemCountcontainer = ({ stock,initial,onAdd }) => {
+const ItemCountcontainer = ({ stock,initial=1,onAdd }) => {
   const [quantity , setQuantity] = useState(initial)
+
+  useEffect(()=>{
+    setQuantity(initial)
+  }, [initial])
+
     const increment = () => {
     if(quantity < stock) { 
         setQuantity(quantity+1)
+    } else {
+        alert("Maximo")
     }
+
 }
     const decrement = () => {
         if(quantity > 1) { 
@@ -15,7 +23,7 @@ const ItemCountcontainer = ({ stock,initial,onAdd }) => {
     }
   return (
 
-      <ItemCountpresentation decrement={decrement} quantity={quantity} increment={increment} onAdd={onAdd} stock={stock}/>
+<ItemCountpresentation decrement={decrement} quantity={quantity} increment={increment} onAdd={onAdd}/>
 
   );
 }

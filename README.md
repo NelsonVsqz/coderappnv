@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# Construmundo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Construmundo Logo](./src/components/CartWidget/assets/construc.jpg)
 
-## Available Scripts
+Bienvenido al proyecto "Construmundo", un e-commerce desarrollado con React.js y Firebase.
 
-In the project directory, you can run:
+## Descripción
 
-### `npm start`
+Construmundo es una plataforma de comercio electrónico que ofrece una amplia variedad de productos relacionados con la construcción, ferretería y plomería. Permite a los usuarios explorar, buscar y comprar productos de manera fácil y conveniente.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Capturas de Pantalla
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Captura de Pantalla 1](./src/components/CartWidget/assets/construmundo1.png)
+![Captura de Pantalla 2](./src/components/CartWidget/assets/construmundo2.png)
+![Captura de Pantalla 3](./src/components/CartWidget/assets/construmundo3.png)
+![Captura de Pantalla 4](./src/components/CartWidget/assets/construmundo4.png)
+![Captura de Pantalla 5](./src/components/CartWidget/assets/construmundo5.png)
+![Captura de Pantalla 6](./src/components/CartWidget/assets/construmundo6.png)
 
-### `npm test`
+## Demostración
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Aquí tienes una breve demostración de cómo funciona la aplicación:
 
-### `npm run build`
+![Construmundo Demo](./src/components/CartWidget/assets/construmundo.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Características
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Muestra una lista de productos disponibles para la compra.
+- Permite agregar productos al carrito de compras.
+- Permite ver el detalle de un producto específico.
+- Permite realizar la compra y finalizar el proceso de checkout.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instalación
 
-### `npm run eject`
+Sigue los pasos a continuación para instalar y ejecutar el proyecto en tu entorno local.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Requisitos previos
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Asegúrate de tener instalado Node.js en tu máquina.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Pasos de instalación
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clona el repositorio de GitHub:
 
-## Learn More
+   ```Github
+   git clone https://github.com/NelsonVsqz/coderappnv.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Ve al directorio del proyecto:
 
-### Code Splitting
+   ```Node
+   cd construmundo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```
 
-### Analyzing the Bundle Size
+3. Instala las dependencias del proyecto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```Node
+   npm install
 
-### Making a Progressive Web App
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Crea un archivo .env en la raíz del proyecto y configura las variables de entorno necesarias. Asegúrate de incluir las siguientes variables:
 
-### Advanced Configuration
+   ```Node
+   REACT_APP_API_KEY=xxx
+   REACT_APP_AUTH_DOMAIN=xx.firebaseapp.com
+   REACT_APP_PROJECT_ID=xx-dxxx
+   REACT_APP_STORAGE_BUCKET=xxx-xx.appspot.com
+   REACT_APP_MESSAGING_SENDER_ID=xxxx
+   REACT_APP_APP_ID=1:xxx:web:xxxxxxxxxxx
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Reemplaza los valores xxx con los correspondientes a tu proyecto de Firebase.
 
-### Deployment
+5. Inicia el servidor de desarrollo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   ```Node
+   npm start
 
-### `npm run build` fails to minify
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+6. Abre tu navegador web y visita la URL http://localhost:3000 para ver la aplicación en funcionamiento.
+
+## Dependencias
+
+A continuación se muestra la lista de dependencias utilizadas en este proyecto:
+
+    ```Node
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.15",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.2.3",
+    "dotenv": "^16.0.3",
+    "firebase": "^9.22.0",
+    "formik": "^2.2.9",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
+    "yup": "^1.1.1"
+
+## Contribución
+
+Si deseas contribuir a este proyecto, sigue los pasos a continuación:
+
+1. Haz un fork de este repositorio.
+2. Crea una nueva rama para tu función o corrección de errores: git checkout -b feature/feature-name o git checkout -b bugfix/bug-name.
+3. Realiza los cambios necesarios y haz commit de tus cambios: git commit -m "Descripción de los cambios".
+4. Haz push a la rama creada en tu repositorio: git push origin feature/feature-name.
+5. Abre un pull request en este repositorio y describe tus cambios en detalle.
+
+## Licencia
+
+Este proyecto se encuentra bajo la licencia MIT.
+
+## Contacto
+
+Para obtener más información, puedes contactarnos en nelson10846@gmail.com.
